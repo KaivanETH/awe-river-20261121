@@ -5,10 +5,11 @@
 // Revision 2: header clarified; the closing cadence softened; images unchanged.
 // The text below is fixed at build time: no clock, no randomness, no network.
 
-import { writeFileSync } from 'node:fs';
+import { mkdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 
 const OUTPUT_DIR = process.env.MAKEFUN_OUTPUT_DIR ?? '/output';
+// Create the target directory when it is missing, so a bare local run works too.
 
 const TEXT =
   'The river holds the sky and asks nothing of you. ' +
@@ -17,4 +18,5 @@ const TEXT =
   'Nothing here is waiting. ' +
   'Stay as long as the light does; the water is patient, and you are not late.';
 
+mkdirSync(OUTPUT_DIR, { recursive: true });
 writeFileSync(join(OUTPUT_DIR, 'entry.txt'), TEXT);
