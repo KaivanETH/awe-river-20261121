@@ -2,7 +2,8 @@
 // Writes one short relaxation text to $MAKEFUN_OUTPUT_DIR/entry.txt (default /output/entry.txt).
 // Node 22, standard library only, deterministic: every run writes the same bytes.
 // Text: written to leave the reader unhurried; shown, never instructed (271 code points).
-// Revision 2: header clarified and the closing cadence softened; the images are unchanged.
+// Revision 2: header clarified; the closing cadence softened; images unchanged.
+// The text below is fixed at build time: no clock, no randomness, no network.
 
 import { writeFileSync } from 'node:fs';
 import { join } from 'node:path';
