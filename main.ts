@@ -4,6 +4,7 @@
 // Text: written to leave the reader unhurried; shown, never instructed (271 code points).
 // Revision 2: header clarified; the closing cadence softened; images unchanged.
 // The text below is fixed at build time: no clock, no randomness, no network.
+// Revision 3: the closing line carries the whole piece; nothing else competes with it.
 
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
